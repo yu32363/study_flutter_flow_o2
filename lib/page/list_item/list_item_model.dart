@@ -1,11 +1,15 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'checkout7_widget.dart' show Checkout7Widget;
+import '/flutter_flow/form_field_controller.dart';
+import 'list_item_widget.dart' show ListItemWidget;
 import 'package:flutter/material.dart';
 
-class Checkout7Model extends FlutterFlowModel<Checkout7Widget> {
+class ListItemModel extends FlutterFlowModel<ListItemWidget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
+  // State field(s) for DropDown widget.
+  String? dropDownValue;
+  FormFieldController<String>? dropDownValueController;
 
   @override
   void initState(BuildContext context) {}

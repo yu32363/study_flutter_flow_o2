@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>Demo-O2</string>
+	<string>o2-poc-flutterflow</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -13,7 +13,7 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>Demo-O2</string>
+	<string>o2-poc-flutterflow</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 
@@ -22,14 +22,25 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleURLTypes</key>
-	<array>        <dict>
+	<array>
+        <dict>
+            <key>CFBundleTypeRole</key>
+            <string>Editor</string>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <!--FF_REVERSED_CLIENT_ID-->
+                
+            </array>
+        </dict>
+
+        <dict>
         <key>CFBundleTypeRole</key>
         <string>Editor</string>
         <key>CFBundleURLName</key>
-        <string>demoo2.com</string>
+        <string>o2pocflutterflow.com</string>
         <key>CFBundleURLSchemes</key>
         <array>
-        <string>demoo2</string>
+        <string>o2pocflutterflow</string>
         </array>
         </dict>
     </array>

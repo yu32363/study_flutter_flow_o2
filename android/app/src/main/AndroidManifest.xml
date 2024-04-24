@@ -1,11 +1,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.mycompany.demoo2"
+    package="com.mycompany.o2poc"
     xmlns:tools="http://schemas.android.com/tools">
     <uses-permission android:name="android.permission.INTERNET"/>
 
 
     <application
-        android:label="Demo-O2"
+        android:label="o2-poc-flutterflow"
         tools:replace="android:label"
         android:icon="@mipmap/ic_launcher"
         android:requestLegacyExternalStorage="true">
@@ -45,7 +45,7 @@
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-                <data android:scheme="demoo2" android:host="demoo2.com" />
+                <data android:scheme="o2pocflutterflow" android:host="o2pocflutterflow.com" />
             </intent-filter>
 
         </activity>

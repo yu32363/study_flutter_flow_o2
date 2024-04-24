@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyDnsuHbeWV4zP6-ET5svl31ZP3uDr4uhzU</string>
+	<key>GCM_SENDER_ID</key>
+	<string>393980758820</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.mycompany.o2poc</string>
+	<key>PROJECT_ID</key>
+	<string>o2-demo-flutterflow</string>
+	<key>STORAGE_BUCKET</key>
+	<string>o2-demo-flutterflow.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:393980758820:ios:1f627b5cc91ce5a8d6c1b1</string>
+</dict>
+</plist>

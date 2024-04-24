@@ -1,4 +1,4 @@
-package com.mycompany.demoo2
+package com.mycompany.o2poc
 
 import io.flutter.embedding.android.FlutterActivity
 

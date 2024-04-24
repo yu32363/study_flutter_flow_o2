@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "393980758820",
+    "project_id": "o2-demo-flutterflow",
+    "storage_bucket": "o2-demo-flutterflow.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:393980758820:android:0d87bf2fe4253d23d6c1b1",
+        "android_client_info": {
+          "package_name": "com.mycompany.o2poc"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBi1F_iP6JdonDt3Q2QzbTY1LUBGZCE1aA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
