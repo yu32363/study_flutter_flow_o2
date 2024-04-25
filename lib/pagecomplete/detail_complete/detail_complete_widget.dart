@@ -65,7 +65,15 @@ class _DetailCompleteWidgetState extends State<DetailCompleteWidget> {
                         hoverColor: Colors.transparent,
                         highlightColor: Colors.transparent,
                         onTap: () async {
-                          context.pushNamed('List_Item_complete');
+                          context.pushNamed(
+                            'List_Item_complete',
+                            queryParameters: {
+                              'state': serializeParam(
+                                '',
+                                ParamType.String,
+                              ),
+                            }.withoutNulls,
+                          );
                         },
                         child: Icon(
                           Icons.chevron_left_sharp,
@@ -79,7 +87,15 @@ class _DetailCompleteWidgetState extends State<DetailCompleteWidget> {
                         hoverColor: Colors.transparent,
                         highlightColor: Colors.transparent,
                         onTap: () async {
-                          context.pushNamed('List_Item_complete');
+                          context.pushNamed(
+                            'List_Item_complete',
+                            queryParameters: {
+                              'state': serializeParam(
+                                '',
+                                ParamType.String,
+                              ),
+                            }.withoutNulls,
+                          );
                         },
                         child: Text(
                           'รายละเอียดการจดจำนอง',

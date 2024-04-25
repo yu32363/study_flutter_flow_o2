@@ -4,10 +4,6 @@ import 'package:flutter/material.dart';
 
 class ListComponentCompleteModel
     extends FlutterFlowModel<ListComponentCompleteWidget> {
-  ///  Local state fields for this component.
-
-  bool completed = true;
-
   @override
   void initState(BuildContext context) {}
 

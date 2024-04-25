@@ -424,7 +424,15 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                       hoverColor: Colors.transparent,
                                       highlightColor: Colors.transparent,
                                       onTap: () async {
-                                        context.pushNamed('List_Item');
+                                        context.pushNamed(
+                                          'List_Item',
+                                          queryParameters: {
+                                            'state': serializeParam(
+                                              '',
+                                              ParamType.String,
+                                            ),
+                                          }.withoutNulls,
+                                        );
                                       },
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
@@ -450,7 +458,15 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                               size: 30.0,
                                             ),
                                             onPressed: () async {
-                                              context.pushNamed('List_Item');
+                                              context.pushNamed(
+                                                'List_Item',
+                                                queryParameters: {
+                                                  'state': serializeParam(
+                                                    '',
+                                                    ParamType.String,
+                                                  ),
+                                                }.withoutNulls,
+                                              );
                                             },
                                           ),
                                           Text(

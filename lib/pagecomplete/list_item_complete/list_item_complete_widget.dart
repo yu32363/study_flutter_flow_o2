@@ -1,8 +1,9 @@
-import '/component/list_component_complete/list_component_complete_widget.dart';
+import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_drop_down.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/form_field_controller.dart';
+import '/pagecomplete/list_component_complete/list_component_complete_widget.dart';
 import 'package:flutter/material.dart';
 import 'list_item_complete_model.dart';
 export 'list_item_complete_model.dart';
@@ -325,36 +326,57 @@ class _ListItemCompleteWidgetState extends State<ListItemCompleteWidget> {
                           color:
                               FlutterFlowTheme.of(context).secondaryBackground,
                         ),
-                        child: InkWell(
-                          splashColor: Colors.transparent,
-                          focusColor: Colors.transparent,
-                          hoverColor: Colors.transparent,
-                          highlightColor: Colors.transparent,
-                          onTap: () async {
-                            context.pushNamed('Detail_complete');
-                          },
-                          child: ListView.builder(
-                            padding: EdgeInsets.zero,
-                            scrollDirection: Axis.vertical,
-                            itemCount: listViewUserDemoRecordList.length,
-                            itemBuilder: (context, listViewIndex) {
-                              final listViewUserDemoRecord =
-                                  listViewUserDemoRecordList[listViewIndex];
-                              return InkWell(
-                                splashColor: Colors.transparent,
-                                focusColor: Colors.transparent,
-                                hoverColor: Colors.transparent,
-                                highlightColor: Colors.transparent,
-                                onTap: () async {
-                                  context.pushNamed('Detail_complete');
-                                },
-                                child: ListComponentCompleteWidget(
-                                  key: Key(
-                                      'Keyqdt_${listViewIndex}_of_${listViewUserDemoRecordList.length}'),
+                        child: StreamBuilder<List<CardRecord>>(
+                          stream: queryCardRecord(),
+                          builder: (context, snapshot) {
+                            // Customize what your widget looks like when it's loading.
+                            if (!snapshot.hasData) {
+                              return Center(
+                                child: SizedBox(
+                                  width: 50.0,
+                                  height: 50.0,
+                                  child: CircularProgressIndicator(
+                                    valueColor: AlwaysStoppedAnimation<Color>(
+                                      FlutterFlowTheme.of(context).primary,
+                                    ),
+                                  ),
                                 ),
                               );
-                            },
-                          ),
+                            }
+                            List<CardRecord> listViewCardRecordList =
+                                snapshot.data!;
+                            return InkWell(
+                              splashColor: Colors.transparent,
+                              focusColor: Colors.transparent,
+                              hoverColor: Colors.transparent,
+                              highlightColor: Colors.transparent,
+                              onTap: () async {
+                                context.pushNamed('Detail_complete');
+                              },
+                              child: ListView.builder(
+                                padding: EdgeInsets.zero,
+                                scrollDirection: Axis.vertical,
+                                itemCount: listViewCardRecordList.length,
+                                itemBuilder: (context, listViewIndex) {
+                                  final listViewCardRecord =
+                                      listViewCardRecordList[listViewIndex];
+                                  return InkWell(
+                                    splashColor: Colors.transparent,
+                                    focusColor: Colors.transparent,
+                                    hoverColor: Colors.transparent,
+                                    highlightColor: Colors.transparent,
+                                    onTap: () async {
+                                      context.pushNamed('Detail_complete');
+                                    },
+                                    child: ListComponentCompleteWidget(
+                                      key: Key(
+                                          'Keyqdt_${listViewIndex}_of_${listViewCardRecordList.length}'),
+                                    ),
+                                  );
+                                },
+                              ),
+                            );
+                          },
                         ),
                       ),
                     ],

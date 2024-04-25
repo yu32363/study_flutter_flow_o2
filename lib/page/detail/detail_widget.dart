@@ -1098,7 +1098,15 @@ class _DetailWidgetState extends State<DetailWidget> {
                   ),
                   FFButtonWidget(
                     onPressed: () async {
-                      context.pushNamed('List_Item_complete');
+                      context.pushNamed(
+                        'List_Item_complete',
+                        queryParameters: {
+                          'state': serializeParam(
+                            '',
+                            ParamType.String,
+                          ),
+                        }.withoutNulls,
+                      );
                     },
                     text: 'แจ้งผล',
                     options: FFButtonOptions(

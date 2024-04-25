@@ -19,8 +19,26 @@ class CardRecord extends FirestoreRecord {
   String get cardId => _cardId ?? '';
   bool hasCardId() => _cardId != null;
 
+  // "cif_no" field.
+  String? _cifNo;
+  String get cifNo => _cifNo ?? '';
+  bool hasCifNo() => _cifNo != null;
+
+  // "customer_name" field.
+  String? _customerName;
+  String get customerName => _customerName ?? '';
+  bool hasCustomerName() => _customerName != null;
+
+  // "type_m" field.
+  String? _typeM;
+  String get typeM => _typeM ?? '';
+  bool hasTypeM() => _typeM != null;
+
   void _initializeFields() {
     _cardId = snapshotData['card_id'] as String?;
+    _cifNo = snapshotData['cif_no'] as String?;
+    _customerName = snapshotData['customer_name'] as String?;
+    _typeM = snapshotData['type_m'] as String?;
   }
 
   static CollectionReference get collection =>
@@ -58,10 +76,16 @@ class CardRecord extends FirestoreRecord {
 
 Map<String, dynamic> createCardRecordData({
   String? cardId,
+  String? cifNo,
+  String? customerName,
+  String? typeM,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
       'card_id': cardId,
+      'cif_no': cifNo,
+      'customer_name': customerName,
+      'type_m': typeM,
     }.withoutNulls,
   );
 
@@ -73,11 +97,15 @@ class CardRecordDocumentEquality implements Equality<CardRecord> {
 
   @override
   bool equals(CardRecord? e1, CardRecord? e2) {
-    return e1?.cardId == e2?.cardId;
+    return e1?.cardId == e2?.cardId &&
+        e1?.cifNo == e2?.cifNo &&
+        e1?.customerName == e2?.customerName &&
+        e1?.typeM == e2?.typeM;
   }
 
   @override
-  int hash(CardRecord? e) => const ListEquality().hash([e?.cardId]);
+  int hash(CardRecord? e) => const ListEquality()
+      .hash([e?.cardId, e?.cifNo, e?.customerName, e?.typeM]);
 
   @override
   bool isValidKey(Object? o) => o is CardRecord;

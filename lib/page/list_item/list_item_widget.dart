@@ -1,3 +1,4 @@
+import '/backend/backend.dart';
 import '/component/list_component/list_component_widget.dart';
 import '/flutter_flow/flutter_flow_drop_down.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -343,36 +344,57 @@ class _ListItemWidgetState extends State<ListItemWidget> {
                             color: FlutterFlowTheme.of(context)
                                 .secondaryBackground,
                           ),
-                          child: InkWell(
-                            splashColor: Colors.transparent,
-                            focusColor: Colors.transparent,
-                            hoverColor: Colors.transparent,
-                            highlightColor: Colors.transparent,
-                            onTap: () async {
-                              context.pushNamed('Detail');
-                            },
-                            child: ListView.builder(
-                              padding: EdgeInsets.zero,
-                              scrollDirection: Axis.vertical,
-                              itemCount: listViewUserDemoRecordList.length,
-                              itemBuilder: (context, listViewIndex) {
-                                final listViewUserDemoRecord =
-                                    listViewUserDemoRecordList[listViewIndex];
-                                return InkWell(
-                                  splashColor: Colors.transparent,
-                                  focusColor: Colors.transparent,
-                                  hoverColor: Colors.transparent,
-                                  highlightColor: Colors.transparent,
-                                  onTap: () async {
-                                    context.pushNamed('Detail');
-                                  },
-                                  child: ListComponentWidget(
-                                    key: Key(
-                                        'Keymwj_${listViewIndex}_of_${listViewUserDemoRecordList.length}'),
+                          child: StreamBuilder<List<CardRecord>>(
+                            stream: queryCardRecord(),
+                            builder: (context, snapshot) {
+                              // Customize what your widget looks like when it's loading.
+                              if (!snapshot.hasData) {
+                                return Center(
+                                  child: SizedBox(
+                                    width: 50.0,
+                                    height: 50.0,
+                                    child: CircularProgressIndicator(
+                                      valueColor: AlwaysStoppedAnimation<Color>(
+                                        FlutterFlowTheme.of(context).primary,
+                                      ),
+                                    ),
                                   ),
                                 );
-                              },
-                            ),
+                              }
+                              List<CardRecord> listViewCardRecordList =
+                                  snapshot.data!;
+                              return InkWell(
+                                splashColor: Colors.transparent,
+                                focusColor: Colors.transparent,
+                                hoverColor: Colors.transparent,
+                                highlightColor: Colors.transparent,
+                                onTap: () async {
+                                  context.pushNamed('Detail');
+                                },
+                                child: ListView.builder(
+                                  padding: EdgeInsets.zero,
+                                  scrollDirection: Axis.vertical,
+                                  itemCount: listViewCardRecordList.length,
+                                  itemBuilder: (context, listViewIndex) {
+                                    final listViewCardRecord =
+                                        listViewCardRecordList[listViewIndex];
+                                    return InkWell(
+                                      splashColor: Colors.transparent,
+                                      focusColor: Colors.transparent,
+                                      hoverColor: Colors.transparent,
+                                      highlightColor: Colors.transparent,
+                                      onTap: () async {
+                                        context.pushNamed('Detail');
+                                      },
+                                      child: ListComponentWidget(
+                                        key: Key(
+                                            'Keymwj_${listViewIndex}_of_${listViewCardRecordList.length}'),
+                                      ),
+                                    );
+                                  },
+                                ),
+                              );
+                            },
                           ),
                         ),
                       ),
