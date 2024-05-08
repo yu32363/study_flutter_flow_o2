@@ -2,6 +2,8 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'list_component_model.dart';
 export 'list_component_model.dart';
 
@@ -41,7 +43,7 @@ class _ListComponentWidgetState extends State<ListComponentWidget> {
     return Container(
       width: MediaQuery.sizeOf(context).width * 1.0,
       height: 100.0,
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         color: Color(0xFFE6E6E6),
       ),
       child: Row(
@@ -49,9 +51,9 @@ class _ListComponentWidgetState extends State<ListComponentWidget> {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
+            padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
             child: Container(
-              decoration: const BoxDecoration(
+              decoration: BoxDecoration(
                 color: Color(0xFFE6E6E6),
               ),
               child: Column(
@@ -130,9 +132,9 @@ class _ListComponentWidgetState extends State<ListComponentWidget> {
             ),
           ),
           Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+            padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
             child: Container(
-              decoration: const BoxDecoration(
+              decoration: BoxDecoration(
                 color: Color(0xFFE6E6E6),
               ),
               child: Row(
@@ -149,7 +151,7 @@ class _ListComponentWidgetState extends State<ListComponentWidget> {
                   ),
                   Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
                     child: Icon(
                       Icons.expand_circle_down_sharp,
                       color: FlutterFlowTheme.of(context).secondaryText,

@@ -1,6 +1,9 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'proflie_model.dart';
 export 'proflie_model.dart';
 
@@ -46,7 +49,7 @@ class _ProflieWidgetState extends State<ProflieWidget> {
                 letterSpacing: 0.0,
               ),
         ),
-        actions: const [],
+        actions: [],
         centerTitle: false,
         elevation: 0.0,
       ),
@@ -65,7 +68,7 @@ class _ProflieWidgetState extends State<ProflieWidget> {
                     BoxShadow(
                       blurRadius: 1.0,
                       color: FlutterFlowTheme.of(context).primaryBackground,
-                      offset: const Offset(
+                      offset: Offset(
                         0.0,
                         0.0,
                       ),
@@ -74,7 +77,7 @@ class _ProflieWidgetState extends State<ProflieWidget> {
                 ),
                 child: Padding(
                   padding:
-                      const EdgeInsetsDirectional.fromSTEB(24.0, 12.0, 24.0, 12.0),
+                      EdgeInsetsDirectional.fromSTEB(24.0, 12.0, 24.0, 12.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     children: [
@@ -88,7 +91,7 @@ class _ProflieWidgetState extends State<ProflieWidget> {
                       ),
                       Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -103,7 +106,7 @@ class _ProflieWidgetState extends State<ProflieWidget> {
                                   ),
                             ),
                             Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 4.0, 0.0, 0.0),
                               child: Text(
                                 '//////////////@google.com',
@@ -129,7 +132,7 @@ class _ProflieWidgetState extends State<ProflieWidget> {
             ],
           ),
           Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 1.0, 0.0, 0.0),
+            padding: EdgeInsetsDirectional.fromSTEB(0.0, 1.0, 0.0, 0.0),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               children: [
@@ -148,7 +151,7 @@ class _ProflieWidgetState extends State<ProflieWidget> {
                         color: FlutterFlowTheme.of(context).secondaryBackground,
                       ),
                       child: Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
+                        padding: EdgeInsetsDirectional.fromSTEB(
                             24.0, 12.0, 24.0, 12.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
@@ -172,12 +175,12 @@ class _ProflieWidgetState extends State<ProflieWidget> {
                                 borderRadius: BorderRadius.circular(20.0),
                               ),
                               child: Stack(
-                                alignment: const AlignmentDirectional(0.0, 0.0),
+                                alignment: AlignmentDirectional(0.0, 0.0),
                                 children: [
                                   Align(
-                                    alignment: const AlignmentDirectional(0.95, 0.0),
+                                    alignment: AlignmentDirectional(0.95, 0.0),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 0.0, 8.0, 0.0),
                                       child: Icon(
                                         Icons.nights_stay,
@@ -188,14 +191,14 @@ class _ProflieWidgetState extends State<ProflieWidget> {
                                     ),
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(-0.85, 0.0),
+                                    alignment: AlignmentDirectional(-0.85, 0.0),
                                     child: Container(
                                       width: 36.0,
                                       height: 36.0,
                                       decoration: BoxDecoration(
                                         color: FlutterFlowTheme.of(context)
                                             .secondaryBackground,
-                                        boxShadow: const [
+                                        boxShadow: [
                                           BoxShadow(
                                             blurRadius: 4.0,
                                             color: Color(0x430B0D0F),
@@ -234,7 +237,7 @@ class _ProflieWidgetState extends State<ProflieWidget> {
                         color: FlutterFlowTheme.of(context).secondaryBackground,
                       ),
                       child: Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
+                        padding: EdgeInsetsDirectional.fromSTEB(
                             24.0, 12.0, 24.0, 12.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
@@ -258,12 +261,12 @@ class _ProflieWidgetState extends State<ProflieWidget> {
                                 borderRadius: BorderRadius.circular(20.0),
                               ),
                               child: Stack(
-                                alignment: const AlignmentDirectional(0.0, 0.0),
+                                alignment: AlignmentDirectional(0.0, 0.0),
                                 children: [
                                   Align(
-                                    alignment: const AlignmentDirectional(-0.9, 0.0),
+                                    alignment: AlignmentDirectional(-0.9, 0.0),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           8.0, 2.0, 0.0, 0.0),
                                       child: Icon(
                                         Icons.wb_sunny_rounded,
@@ -274,14 +277,14 @@ class _ProflieWidgetState extends State<ProflieWidget> {
                                     ),
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(0.9, 0.0),
+                                    alignment: AlignmentDirectional(0.9, 0.0),
                                     child: Container(
                                       width: 36.0,
                                       height: 36.0,
                                       decoration: BoxDecoration(
                                         color: FlutterFlowTheme.of(context)
                                             .secondaryBackground,
-                                        boxShadow: const [
+                                        boxShadow: [
                                           BoxShadow(
                                             blurRadius: 4.0,
                                             color: Color(0x430B0D0F),
@@ -316,7 +319,7 @@ class _ProflieWidgetState extends State<ProflieWidget> {
                 children: [
                   Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(24.0, 12.0, 0.0, 12.0),
+                        EdgeInsetsDirectional.fromSTEB(24.0, 12.0, 0.0, 12.0),
                     child: Text(
                       'Account Settings',
                       style: FlutterFlowTheme.of(context).labelMedium.override(
@@ -333,13 +336,13 @@ class _ProflieWidgetState extends State<ProflieWidget> {
             mainAxisSize: MainAxisSize.max,
             children: [
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
                 child: Container(
                   width: double.infinity,
                   height: 60.0,
                   decoration: BoxDecoration(
                     color: FlutterFlowTheme.of(context).secondaryBackground,
-                    boxShadow: const [
+                    boxShadow: [
                       BoxShadow(
                         blurRadius: 5.0,
                         color: Color(0x3416202A),
@@ -353,12 +356,12 @@ class _ProflieWidgetState extends State<ProflieWidget> {
                     shape: BoxShape.rectangle,
                   ),
                   child: Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: EdgeInsets.all(8.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               12.0, 0.0, 0.0, 0.0),
                           child: Text(
                             'Change Password',
@@ -372,7 +375,7 @@ class _ProflieWidgetState extends State<ProflieWidget> {
                         ),
                         Expanded(
                           child: Align(
-                            alignment: const AlignmentDirectional(0.9, 0.0),
+                            alignment: AlignmentDirectional(0.9, 0.0),
                             child: Icon(
                               Icons.arrow_forward_ios,
                               color: FlutterFlowTheme.of(context).secondaryText,
@@ -386,13 +389,13 @@ class _ProflieWidgetState extends State<ProflieWidget> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(20.0, 12.0, 20.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(20.0, 12.0, 20.0, 0.0),
                 child: Container(
                   width: double.infinity,
                   height: 60.0,
                   decoration: BoxDecoration(
                     color: FlutterFlowTheme.of(context).secondaryBackground,
-                    boxShadow: const [
+                    boxShadow: [
                       BoxShadow(
                         blurRadius: 5.0,
                         color: Color(0x3416202A),
@@ -406,12 +409,12 @@ class _ProflieWidgetState extends State<ProflieWidget> {
                     shape: BoxShape.rectangle,
                   ),
                   child: Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: EdgeInsets.all(8.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               12.0, 0.0, 0.0, 0.0),
                           child: Text(
                             'Edit Profile',
@@ -425,7 +428,7 @@ class _ProflieWidgetState extends State<ProflieWidget> {
                         ),
                         Expanded(
                           child: Align(
-                            alignment: const AlignmentDirectional(0.9, 0.0),
+                            alignment: AlignmentDirectional(0.9, 0.0),
                             child: Icon(
                               Icons.arrow_forward_ios,
                               color: FlutterFlowTheme.of(context).secondaryText,

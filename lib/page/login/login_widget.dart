@@ -2,8 +2,11 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:async';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'login_model.dart';
 export 'login_model.dart';
 
@@ -66,11 +69,11 @@ class _LoginWidgetState extends State<LoginWidget> {
         body: SafeArea(
           top: true,
           child: Align(
-            alignment: const AlignmentDirectional(0.0, 0.0),
+            alignment: AlignmentDirectional(0.0, 0.0),
             child: Container(
               width: double.infinity,
               height: double.infinity,
-              constraints: const BoxConstraints(
+              constraints: BoxConstraints(
                 maxWidth: 670.0,
               ),
               decoration: BoxDecoration(
@@ -82,7 +85,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                   ).image,
                 ),
               ),
-              alignment: const AlignmentDirectional(0.0, 0.0),
+              alignment: AlignmentDirectional(0.0, 0.0),
               child: Stack(
                 children: [
                   Column(
@@ -91,9 +94,9 @@ class _LoginWidgetState extends State<LoginWidget> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Align(
-                        alignment: const AlignmentDirectional(0.0, 0.0),
+                        alignment: AlignmentDirectional(0.0, 0.0),
                         child: Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 10.0, 0.0, 0.0),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(8.0),
@@ -102,7 +105,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                               width: 121.0,
                               height: 162.0,
                               fit: BoxFit.fitWidth,
-                              alignment: const Alignment(0.0, 0.0),
+                              alignment: Alignment(0.0, 0.0),
                             ),
                           ),
                         ),
@@ -113,9 +116,9 @@ class _LoginWidgetState extends State<LoginWidget> {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Align(
-                            alignment: const AlignmentDirectional(0.0, 0.0),
+                            alignment: AlignmentDirectional(0.0, 0.0),
                             child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   10.0, 30.0, 10.0, 8.0),
                               child: Text(
                                 'Krungsri Lending Operation',
@@ -135,18 +138,18 @@ class _LoginWidgetState extends State<LoginWidget> {
                         ],
                       ),
                       Align(
-                        alignment: const AlignmentDirectional(0.0, 0.0),
+                        alignment: AlignmentDirectional(0.0, 0.0),
                         child: Padding(
-                          padding: const EdgeInsets.all(24.0),
+                          padding: EdgeInsets.all(24.0),
                           child: SingleChildScrollView(
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Align(
-                                  alignment: const AlignmentDirectional(0.0, 0.0),
+                                  alignment: AlignmentDirectional(0.0, 0.0),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 1.0),
                                     child: Text(
                                       'ลงชื่อเข้าใช้',
@@ -163,7 +166,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       16.0, 12.0, 16.0, 0.0),
                                   child: TextFormField(
                                     controller: _model.textController1,
@@ -226,7 +229,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                       fillColor: FlutterFlowTheme.of(context)
                                           .secondaryBackground,
                                       contentPadding:
-                                          const EdgeInsetsDirectional.fromSTEB(
+                                          EdgeInsetsDirectional.fromSTEB(
                                               16.0, 16.0, 16.0, 8.0),
                                     ),
                                     style: FlutterFlowTheme.of(context)
@@ -241,9 +244,9 @@ class _LoginWidgetState extends State<LoginWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(0.0, 0.0),
+                                  alignment: AlignmentDirectional(0.0, 0.0),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         16.0, 12.0, 16.0, 0.0),
                                     child: TextFormField(
                                       controller: _model.textController2,
@@ -309,7 +312,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                         fillColor: FlutterFlowTheme.of(context)
                                             .secondaryBackground,
                                         contentPadding:
-                                            const EdgeInsetsDirectional.fromSTEB(
+                                            EdgeInsetsDirectional.fromSTEB(
                                                 16.0, 16.0, 16.0, 8.0),
                                         suffixIcon: InkWell(
                                           onTap: () => setState(
@@ -341,9 +344,9 @@ class _LoginWidgetState extends State<LoginWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(1.0, 0.0),
+                                  alignment: AlignmentDirectional(1.0, 0.0),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 16.0, 0.0, 0.0),
                                     child: RichText(
                                       textScaler:
@@ -387,7 +390,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                         0
                                     : _isKeyboardVisible))
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         16.0, 20.0, 16.0, 24.0),
                                     child: FFButtonWidget(
                                       onPressed: () async {
@@ -397,10 +400,10 @@ class _LoginWidgetState extends State<LoginWidget> {
                                       options: FFButtonOptions(
                                         width: double.infinity,
                                         height: 46.0,
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 0.0, 0.0),
                                         iconPadding:
-                                            const EdgeInsetsDirectional.fromSTEB(
+                                            EdgeInsetsDirectional.fromSTEB(
                                                 0.0, 0.0, 0.0, 0.0),
                                         color: FlutterFlowTheme.of(context)
                                             .primaryText,
@@ -414,7 +417,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                               letterSpacing: 0.0,
                                             ),
                                         elevation: 4.0,
-                                        borderSide: const BorderSide(
+                                        borderSide: BorderSide(
                                           color: Colors.transparent,
                                           width: 1.0,
                                         ),
